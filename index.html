@@ -1,17 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Sternchen macht das es für alle Elemente gilt, gap = gleicher Abstand zwischen */
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 18px;
+
+        }
+
+        /* Sagen wie max groß der ist */
+        body {
+            max-width: 100vw;
+            margin: 0 auto;
+            padding: 1rem; /* Padding für Abstand vom Rand */
+        }
+
+        /* Max Größe, Auto Größe wird angepasst an die Breite */
+        img {
+            max-width: 81%;
+            height: auto;
+            display: block; /* Verhindert zusätzlichen Raum unter dem Bild */
+            margin: auto; /* Zentriert das Bild horizontal */
+        }
+
+        /* Vertikal horizontal Achse wird zentriert (justify..., align...) */
+        .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 1rem; /* Abstand zwischen den Elementen */
+            width: 100%;
+        }
+
+        .text-container {
+            flex: 1; /* Nimmt 50% der Breite der row ein */
+            max-width: 50%; /* Maximal 50% der Breite einnehmen */
+        }
+
+        .sixteen-nine {
+            flex: 1; /* Nimmt 50% der Breite der row ein */
+            max-width: 50%; /* Maximal 50% der Breite einnehmen */
+        }
+
+        figure {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0; /* Kein zusätzlicher Abstand */
+        }
+
+        /* Stile für das h1-Element */
+        h1 {
+            font-family: 'Roboto', sans-serif; /* Beispiel-Schriftart */
+            font-weight: 700;
+            font-size: 12rem; /* Standard Schriftgröße */
+            color: #4f7055; /* Schriftfarbe */
+            margin: 0rem 0 4rem 2rem; /* Abstand oben, kein Abstand unten */
+            flex-shrink: 1; /* Erlaubt das Verkleinern des h1-Elements */
+            transition: font-size 0.3s ease; /* Übergang für die Schriftgröße */
+        }
+
+        /* Stile für das p-Element */
+        p {
+            font-family: 'Roboto', sans-serif; /* Beispiel-Schriftart */
+            font-size: 1.1rem;
+            margin: 0rem 0 1rem 2rem; /* Abstand oben, kein Abstand unten */
+            text-align: left; /* Linksbündiger Text */
+        }
+
+        /* Stile für den Button */
+        .button-container {
+            margin-top: 5rem; /* Abstand nach oben */
+            margin-bottom: 1rem; /* Abstand nach unten */
+            margin-left: 2rem;
+        }
+
+        .button {
+            padding: 1rem 1.5rem;
+            background-color: #4f7055;
+            color: white;
+            font-size: 1.5rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #63826b;
+        }
+
+        /* Media Query für kleinere Bildschirme */
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column; /* Ändert die Ausrichtung auf gestapelte Anordnung */
+            }
+
+            .text-container, .sixteen-nine {
+                max-width: 100%; /* Beide nehmen die volle Breite ein */
+            }
+
+            h1 {
+                font-size: 3rem; /* Verkleinerte Schriftgröße für kleinere Bildschirme */
+            }
+
+            img {
+                max-width: 100%; /* Bild nimmt die volle Breite auf kleineren Bildschirmen ein */
+            }
+        }
+
+    </style>
+    <!-- Google Fonts einbinden -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<main>
-		<figure>
-			<img src="https://picsum.photos/200/300" alt="1">
-			<figcaption>something</figcaption>
-		</figure>
-	</main>
+  <div class="row">
+    <div class="text-container">
+      <h1>Exkursion 2024</h1>
+      <p>In diesem Archiv habe ich viele Eindrücke festgehalten und dokumentiert, die ich während der Exkursion mit dem Grundlagenkurs in Leipzig gesammelt habe.</p>
+      <p>-mel★</p>
+      <div class="button-container">
+        <a href="page2.html" class="button">➠ Archiv</a>
+      </div>
+    </div>
+    <figure class="sixteen-nine">
+      <img src="bilder/mel.jpg" alt="">
+    </figure>
+  </div>
+ 
 </body>
 </html>

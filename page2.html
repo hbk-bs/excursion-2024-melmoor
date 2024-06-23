@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excursion 2024 - Part 2</title>
+    <style>
+        /* Sternchen macht das es für alle Elemente gilt, gap = gleicher Abstand zwischen */
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 18px;
+        }
+
+        /* Sagen wie max groß der ist */
+        body {
+            max-width: 100vw;
+            margin: 0 auto;
+            padding: 1rem; /* Padding für Abstand vom Rand */
+        }
+
+        /* Max Größe, Auto Größe wird angepasst an die Breite */
+        img {
+            max-width: 90%;
+            height: auto;
+        }
+
+         /* Stile für die fixierte Navigationsleiste */
+         .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 8%;
+            width: 100%;
+            background-color: #2d4131cb;
+            padding: 1rem 0;
+            text-align: center;
+            z-index: 1000;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Platzierung Mel links, Exkursion zentriert */
+            padding-left: 1rem; /* Adjust left padding for Mel text */
+            padding-right: 1rem; 
+         }
+
+          /* Navbar heading styles */
+          .navbar p {
+            font-size: 1.4rem;
+            margin: 0;
+            cursor: pointer; /* Zeigercursor, um Klickbarkeit anzuzeigen */
+        }
+
+        /* Change cursor to pointer on hover */
+        .navbar p:hover {
+            cursor: pointer;
+            color: #8baa92;
+        }
+
+        /* Vertikal horizontal Achse wird zentriert (justify..., align...) */
+        .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            margin-left: 2rem; 
+            margin-right: 2rem;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 0rem; /* Abstand zwischen den Elementen */
+            margin-left: 10rem; 
+            margin-right: 10rem;
+            width: auto;
+        }
+
+        .danke {
+            font-family: 'Roboto', sans-serif; /* Beispiel-Schriftart */
+            margin: 0rem 0 0rem 0; /* Abstand oben, kein Abstand unten */
+            text-align: center; 
+            margin-left: 20rem;
+            border: 3px dashed #4f7055; /* Gestrichelter Rahmen */
+            padding: 0; /* Innenabstand für Text */
+            padding-bottom: 1rem;
+            width: auto; /* Auto-Breite */
+        }
+
+        figure {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+           
+              }
+
+
+        h1{
+            font-family: 'Roboto', sans-serif; /* Beispiel-Schriftart */
+        }
+
+        /* Stile für das h2-Element */
+        h2 {
+            font-family: 'Roboto', sans-serif; /* Beispiel-Schriftart */
+            font-weight: 500;
+            font-size: 4rem; /* Schriftgröße */
+            color: #4f7055; /* Schriftfarbe */
+             flex-shrink: 0; /* Verhindert, dass das h1-Element kleiner wird */
+             align-content: center;
+             margin-left: 12rem;
+             margin-top: 10rem;
+             margin-bottom: 2rem;
+        }
+
+        /* Stile für das p-Element */
+        p {
+            font-family: 'Roboto', sans-serif; /* Beispiel-Schriftart */
+            margin: 1.5rem 0 0.5rem 0; /* Abstand oben, kein Abstand unten */
+            text-align: left; /* Linksbündiger Text */
+            margin-left: 12.5rem; 
+            margin-right: 10rem;
+        }
+
+        figcaption {
+            font-family: 'Roboto', sans-serif; /* Beispiel-Schriftart */
+            margin: 0.5rem 0 0 15rem; /* Abstand oben, kein Abstand unten */
+            text-align: left; /* Linksbündiger Text */
+            margin-left: 0rem; 
+            margin-bottom: 3rem;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 50%; /* Maximal 50% der Breite einnehmen */
+        }
+    </style>
+    <!-- Google Fonts einbinden -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+            <p onclick="redirectToIndex()">zurück</p>
+        <h1>Exkursion Leipzig 2024</h1>
+        <p onclick="redirectToIndex()">mel★</p>
+    </div>
+
+    <h2>Menschen</h2>
+    <p>Hier habe ich mich mit dem Körper und der Haltung von Menschen befasst. </p>
+    <div class="row">
+
+        <figure>
+            <img src="bilder/Aktzeichnung.jpg" alt="">
+            <figcaption>Fritz von Uhde "Aktstudie / Study of a nude", 1880/1905</figcaption>
+        </figure>
+
+        <figure>
+            <img src="bilder/Aktzeichnung2.jpg" alt="">
+            <figcaption>Franz von Lenbach "Weiblicher Halbakt / Female half-nude", 1897</figcaption>
+        </figure>
+      
+    </div>
+
+    <div class="row">
+
+        <figure>
+            <img src="bilder/Aktzeichnungz.jpg" alt="">
+            <figcaption>Durch die Skizze sind mir die Proportionen und die Haltung deutlicher geworden.</figcaption>
+
+        </figure>
+
+        <figure>
+            <img src="bilder/Aktzeichnung2z.jpg" alt="">
+            <figcaption>Zudem sind mir die kleinen Details, wie beispielsweise der hell und dunkel Kontrast, durch das zeichnen mehr aufgefallen. </figcaption>
+
+        </figure>
+      
+    </div>
+
+    <div class="row">
+
+        <figure>
+            <img src="bilder/maler nahjpg.jpg" alt="">
+        </figure>
+
+        <figure>
+            <img src="bilder/maler 932x932.jpg" alt="">
+            <figcaption>Max Slevogt "Selbstbildnis mit Palette / Self-Portrait with Palette", 1906</figcaption>
+        </figure>
+      
+    </div>
+
+    <div class="column" style="width: 50rem; margin-left: 30rem;">
+
+        <figure>
+            <img src="bilder/mann nahz.jpg" alt="">
+            <figcaption>Zwei unterschiedliche Augenfarben (Iris-Heterochromie)</figcaption>
+        </figure>
+      
+    </div>
+
+    <div class="row">
+
+        <figure>
+            <img src="bilder/mann sitzt.jpg" alt="">
+            <figcaption>Max Liebermann "Rast in den Dünen / Rest in the dunes", 1896</figcaption>
+        </figure>
+
+
+        <figure>
+            <img src="bilder/frau mit hut 601x841.jpg" alt="">
+            <figcaption>Wilhelm Leibl "Bildnis der Frau Apotheker Rieder / Portrait of the pharmacist's Rieder wife", 1893</figcaption>
+        </figure>
+
+    </div>
+
+    <div class="row">
+
+        <figure>
+            <img src="bilder/menschen.jpg" alt="">
+            <figcaption></figcaption>
+        </figure>
+
+        <figure>
+            <img src="bilder/skulptur.jpg" alt="">
+            <figcaption>Jules Dalou "Die Lesende / Women reading", 1872</figcaption>
+        </figure>
+
+    </div>   
+
+    <div class="row">
+
+        <figure>
+            <img src="bilder/junge.jpg" alt="">
+            <figcaption>Jean-Baptiste Carpeaux "Spottender Amor / Mocking Cupid", 1874</figcaption>
+        </figure>
+
+        <figure>
+            <img src="bilder/jungez.jpg" alt="">
+            <figcaption></figcaption>
+        </figure>
+
+    </div>   
+
+    <div class="column" style="width: 40rem; margin-left: 33rem;">
+
+        <figure>
+            <img src="bilder/körper.jpg" alt="">
+            <figcaption></figcaption>
+        </figure>
+
+    </div>   
+
+        <h2>Architektur</h2>
+        <p>Beim spazieren in der Stadt sind mir viele verschiedene Gebäude, Dächer, Türen und weiteres aufgefallen. Besonders gefallen haben mir die Wandbemalungen.</p>
+    <div class="row">
+
+        <figure>
+            <img src="bilder/architektur.jpg" alt="">
+            <figcaption></figcaption>
+        </figure>
+
+        <figure>
+            <img src="bilder/architektur2.jpg" alt="">
+            <figcaption></figcaption>
+        </figure>
+      
+    </div>
+
+    <div class="row">
+
+        <figure>
+            <img src="bilder/Decke.jpg" alt="">
+            <figcaption></figcaption>
+        </figure>
+
+        <figure>
+            <img src="bilder/perspektive.jpg" alt="">
+            <figcaption></figcaption>
+        </figure>
+      
+    </div>
+
+    <div class="row">
+
+        <figure>
+            <img src="bilder/passagejpg.jpg" alt="">
+            <figcaption></figcaption>
+        </figure>
+
+        <figure>
+            <img src="bilder/hausblock.jpg" alt="">
+            <figcaption></figcaption>
+        </figure>
+      
+    </div>
+
+    <div class="row">
+
+        <figure>
+            <img src="bilder/hauswand.jpg" alt="">
+            <figcaption></figcaption>
+        </figure>
+
+        <figure>
+            <img src="bilder/gang.jpg" alt="">
+            <figcaption></figcaption>
+        </figure>
+      
+    </div>
+
+    <div class="row">
+
+        <figure>
+            <img src="bilder/fenster.jpg" alt="">
+            <figcaption></figcaption>
+        </figure>
+
+        <figure>
+            <img src="bilder/tur.jpg" alt="">
+            <figcaption></figcaption>
+        </figure>
+      
+    </div>
+
+    <h2>Druckerei</h2>
+    <p>Wir haben das Museum für Druckkunst besucht und haben dargestellt bekommen wie verschiedene Drucktechniken funktionieren und wie viele verschiedene Maschinen es gibt.</p>
+    <div class="row">
+
+        <figure>
+            <img src="bilder/drucker.jpg" alt="">
+            <figcaption>Viele verschiedene Möglichkeiten zu drucken.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="bilder/yuki.jpg" alt="">
+            <figcaption>Beim Workshop durften wir selber ein Wort oder einen Satz drucken, und konnten dem Prizip des druckens somit näher kommen.</figcaption>
+        </figure>
+      
+    </div>
+
+    <div class="row">
+
+        <figure>
+            <img src="bilder/yuki hand.jpg" alt="">
+            <figcaption>Mein Ergebnis aus dem Workshop.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="bilder/hund 1200x1500.jpg" alt="">
+            <figcaption></figcaption>
+        </figure>
+      
+    </div>
+
+    <h2>Eyecatcher</h2>
+    <p>Beim Rückweg zum Hostel sind mir immer wieder verschiedene Sachen ins Auge gesprungen die mich fasziniert haben.</p>
+    <div class="row">
+
+        <figure>
+            <img src="bilder/poster.jpg" alt="">
+            <figcaption>Viele Poster mit kräftigen Farben, jedoch ist mir dieses am meisten aufgefallen.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="bilder/lego.jpg" alt="">
+            <figcaption>Eine kaputte Treppe wurde mit Legosteinen repariert.</figcaption>
+        </figure>
+      
+    </div>
+
+    <div class="row">
+
+        <figure>
+            <img src="bilder/eyecatcher.jpg" alt="">
+            <figcaption>Durch die Spiegelung schaut es so aus, als würde sich das Gebäude verdoppelt haben.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="bilder/grafiti.jpg" alt="">
+            <figcaption>Das Grafiti ist mir direkt am ersten Tag aufgefallen, sowie auch viele andere.</figcaption>
+        </figure>
+      
+    </div>
+
+    <div class="row">
+
+        <figure>
+            <img src="bilder/statue.jpg" alt="">
+            <figcaption>Eine Statue die sich mitten in der Stadt befindet, und drei verschiedene Männer darstellt.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="bilder/statuez.jpg" alt="">
+            <figcaption></figcaption>
+        </figure>
+      
+    </div>
+
+
+    <h2>Favoriten</h2>
+    <p>Die Werke die mir im Kopf geblieben sind und mich am meisten beeindruckt haben, habe ich hier zusammengefasst.</p>
+    <div class="row">
+
+        <figure>
+            <img src="bilder/collage.jpg" alt="">
+            <figcaption></figcaption>
+        </figure>
+
+        <figure>
+            <img src="bilder/pastik.jpg" alt="">
+            <figcaption>Beim betrachten dieser Plastik findet man immer wieder neue Details, die man davor gar nicht gesehen hatte.</figcaption>
+        </figure>
+      
+    </div>
+
+    <div class="row">
+
+    <figure>
+        <img src="bilder/teppich.jpg" alt="">
+        <figcaption>Die Farben und Linien lassen es wie ein großes Feld aussehen.</figcaption>
+    </figure>
+
+    <figure>
+        <img src="bilder/teppich2.png" alt="">
+        <figcaption></figcaption>
+    </figure>
+
+    </div> 
+
+    <div class="row">
+
+        <figure>
+            <img src="bilder/pinkelnder tod 425x595.jpg" alt="">
+            <figcaption>Max Klinger "Der Tod am Wasser (Der pinkelnde Tod) / Death by the water (The peeing death)", 1881</figcaption>
+        </figure>
+
+        <figure>
+            <img src="bilder/stillleben.jpg" alt="">
+            <figcaption>Jan Davidsz. de Heem "Vanitasstilleben / Vanitas Still Life", 1628</figcaption>
+        </figure>
+      
+    </div>
+
+    <div class="danke">
+    <p>Das war mein Archiv von der Exkursion in Leipzig. Danke fürs reinschauen! :D</p>
+    <p>-mel★</p>
+    </div>
+
+
+    <script>
+        function redirectToIndex() {
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+
+</html>
